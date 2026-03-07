@@ -1,24 +1,160 @@
+/* body {
+    font-family: 'Tangerine',
+        cursive;
+} */
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #212121;
+    background-color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Oswald", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* ul, ol {
+    list-style-type: none;
+} */
+
+
+/* сброс всех подчеркиваний у ссылок */
+a {
+    text-decoration: none;
+}
+
+
 .page-header {
     background-color: #f5f5f5;
     
 }
 
 .page-title {
-    color: #3f51b5;
+    font-size: 32px; 
+    text-align: center;
+    line-height: 1.333;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px #212121;
+    color: black;
 }
 
 .section-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.333;
+    letter-spacing: 1px;
     color: #9c27b0;
 }
 
-.section-text {
-    color: #00bcd4;
+.club-list .link {
+    font-style: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffc107;
 }
 
-.page-footer {
-background-color: #f5f5f5;
+.club-list .title {
+    font-style: 16px;
+    text-align: center;
+    line-height: 1.333;
 }
 
-.benefits>li {
-    color: #d500f9;
+.club-list .link:hover,
+.club-list .link:focus {
+    text-decoration: underline;
+    color: #f57f17;
 }
+
+.club-list .link:active {
+    color: #ff1744;
+}
+
+
+.section-text{
+    line-height: 1.5;
+    text-indent: 24px;
+}
+
+
+.page-nav .link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: 14px;
+    color: currentColor;
+}
+
+.page-nav .link:active {
+    color: #212121;
+}
+
+.page-nav .link:hover,
+.page-nav .link:focus {
+    color: #18ffff;
+}
+
+
+.downloads .link {
+    text-decoration: none;
+}
+
+.downloads .link:hover,
+.downloads .link:focus {
+    text-decoration: underline;
+}
+
+.downloads .plan-name {
+    color: #ff1744;
+}
+
+
+
+/* :hover  :active  = Footer*/
+
+/* .social-links .link {
+    color: teal;
+}
+
+.social-links .link:hover {
+    color: tomato;
+} */
+
+/* .social-links .link {
+    color: teal;
+}
+
+.social-links .link:hover {
+    color: orange;
+}
+
+.social-links .link:active {
+    color: red;
+} */
+
+/* псевдоэлементы */
+/*  ::first-line
+    ::first-letter
+    ::selection 
+*/
+
+.description::selection {
+    background-color: yellow;
+    color: blue;
+}
+
+/* .description::first-letter {
+    color: red;
+} */
+
+/* .description::first-line {
+    color: red;
+} */
