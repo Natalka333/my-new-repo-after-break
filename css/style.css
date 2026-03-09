@@ -3,11 +3,11 @@
         cursive;
 } */
 body {
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #212121;
-    background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #212121;
+  background-color: #fafafa;
 }
 
 h1,
@@ -16,107 +16,114 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif;
+  margin: 0;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* ul, ol {
     list-style-type: none;
 } */
 
-
 /* сброс всех подчеркиваний у ссылок */
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+p {
+  margin: 0;
 }
 
-
 .page-header {
-    background-color: #f5f5f5;
-    
+  background-color: #f5f5f5;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .page-title {
-    font-size: 32px; 
-    text-align: center;
-    line-height: 1.333;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 4px #212121;
-    color: black;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.333;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px #212121;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 
 .section-title {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.333;
-    letter-spacing: 1px;
-    color: #9c27b0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.333;
+  letter-spacing: 1px;
+  color: #9c27b0;
 }
 
 .club-list .link {
-    font-style: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #ffc107;
+  font-style: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffc107;
 }
 
 .club-list .title {
-    font-style: 16px;
-    text-align: center;
-    line-height: 1.333;
+  font-style: 16px;
+  text-align: center;
+  line-height: 1.333;
 }
 
 .club-list .link:hover,
 .club-list .link:focus {
-    text-decoration: underline;
-    color: #f57f17;
+  text-decoration: underline;
+  color: #f57f17;
 }
 
 .club-list .link:active {
-    color: #ff1744;
+  color: #ff1744;
 }
 
-
-.section-text{
-    line-height: 1.5;
-    text-indent: 24px;
+.section-text {
+  line-height: 1.5;
+  text-indent: 24px;
 }
 
+.page-nav {
+  padding: 0;
+}
 
 .page-nav .link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-style: 14px;
-    color: currentColor;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: 14px;
+  color: currentColor;
 }
 
 .page-nav .link:active {
-    color: #212121;
+  color: #212121;
 }
 
 .page-nav .link:hover,
 .page-nav .link:focus {
-    color: #18ffff;
+  color: #18ffff;
 }
 
-
 .downloads .link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .downloads .link:hover,
 .downloads .link:focus {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .downloads .plan-name {
-    color: #ff1744;
+  color: #ff1744;
 }
-
-
 
 /* :hover  :active  = Footer*/
 
@@ -147,8 +154,8 @@ a {
 */
 
 .description::selection {
-    background-color: yellow;
-    color: blue;
+  background-color: yellow;
+  color: blue;
 }
 
 /* .description::first-letter {
