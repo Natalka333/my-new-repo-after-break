@@ -1,14 +1,19 @@
-/* body {
-    font-family: 'Tangerine',
-        cursive;
-} */
+/* 5. 15.16.17 cтрока чтоб приклеить футер к низу экрана */
+
+main {
+  flex-grow: 1;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #212121;
-  background-color: #fafafa;
   margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #212121;
+  font-size: 14px;
+  background-color: #ffffff;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -17,49 +22,37 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0;
   font-family: "Oswald", sans-serif;
+}
+
+p {
   margin: 0;
 }
 
 ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-/* ul, ol {
-    list-style-type: none;
-} */
-
-/* сброс всех подчеркиваний у ссылок */
-a {
-  text-decoration: none;
-}
-p {
-  margin: 0;
+  list-style-type: none;
 }
 
 img {
   display: block;
   max-width: 100%;
+  object-fit: cover;
 }
 
 .container {
   max-width: 960px;
-  padding: 0 16px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 .page-header {
-  background-color: #f5f5f5;
+  margin-bottom: 20px;
   padding-top: 16px;
   padding-bottom: 16px;
-  margin-bottom: 20px;
-}
-
-.page-nav {
-  display: flex;
-  gap: 8px;
+  background-color: #e0e0e0;
 }
 
 .page-header .container {
@@ -68,163 +61,181 @@ img {
   align-items: center;
 }
 
-/* .section:hover,
-.title:focus {
-  border: 2px solid cyan;
-} */
-
-.page-title {
-  font-size: 32px;
-  text-align: center;
-  line-height: 1.333;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 4px #212121;
-  color: black;
-  margin-top: 0;
-  margin-bottom: 24px;
-}
-
-.section-title {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.333;
-  text-align: center;
-  letter-spacing: 1px;
-  color: #9c27b0;
-  margin-bottom: 20px;
-}
-
-.club-list .link {
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #ffc107;
-}
-
-.benefits {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.benefits .item {
-  width: 280px;
-}
-
-/* Убираем на картинке выступающие углы за рамки в закоменч есть углы а другом уже убрали */
-/* .club-list .item {
-  border: 1px solid #03a9f4;
-  border-radius: 8px;
-} */
-.club-list .item {
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.club-list .title {
-  font-size: 16px;
-  text-align: center;
-  line-height: 1.333;
-}
-
-.club-list .link:hover,
-.club-list .link:focus {
-  text-decoration: underline;
-  color: #f57f17;
-}
-
-.club-list .link:active {
-  color: #ff1744;
-}
-
-.section-text {
-  line-height: 1.5;
-  text-indent: 24px;
-  margin-bottom: 16px;
-}
-
 .page-nav {
-  padding: 0;
+  display: flex;
+  gap: 8px;
 }
 
 .page-nav .link {
   display: block;
-  padding: 8px 12px;
+  padding: 4px 8px;
+  color: #03a9f4;
   text-decoration: none;
-  text-transform: uppercase;
   font-size: 14px;
-  color: currentColor;
-}
-
-.page-nav .link:active {
-  color: #212121;
+  text-transform: uppercase;
 }
 
 .page-nav .link:hover,
 .page-nav .link:focus {
-  color: #18ffff;
+  color: #0288d1;
 }
 
-.downloads .link {
+.page-nav .link:active {
+  color: #f44336;
+}
+
+.page-title {
+  margin-bottom: 24px;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.333;
+  letter-spacing: 3px;
+}
+
+.section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px dashed #212121;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.333;
+  letter-spacing: 1px;
+}
+
+.club-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.club-list .item {
+  flex-basis: calc((100% - 24px) / 3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.club-list .title {
+  margin-bottom: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.333;
+}
+
+.club-list .link {
+  color: #03a9f4;
+  font-weight: 500;
+  font-size: 14px;
   text-decoration: none;
 }
 
-.downloads {
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
-    
+.club-list .link:hover,
+.club-list .link:focus {
+  color: #0288d1;
+}
 
+.club-list .link:active {
+  color: #f44336;
+}
+.downloads {
+  margin-top: 20px;
+}
+
+.downloads .item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.downloads .link {
+  color: #03a9f4;
+  text-decoration: none;
+}
 
 .downloads .link:hover,
 .downloads .link:focus {
+  color: #0288d1;
   text-decoration: underline;
 }
 
-.downloads .plan-name {
-  color: #ff1744;
+.downloads .link:active {
+  color: #f44336;
 }
 
-/* :hover  :active  = Footer*/
-
-/* .social-links .link {
-    color: teal;
+.page-footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #212121;
 }
 
-.social-links .link:hover {
-    color: tomato;
-} */
-
-/* .social-links .link {
-    color: teal;
+.page-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.social-links .link:hover {
-    color: orange;
+.copyright-text {
+  color: #ffffff;
+  flex-basis: 300px;
 }
 
-.social-links .link:active {
-    color: red;
-} */
-
-/* псевдоэлементы */
-/*  ::first-line
-    ::first-letter
-    ::selection 
-*/
-
-.description::selection {
-  background-color: yellow;
-  color: blue;
+.social-links {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  align-self: flex-end;
 }
 
-/* .description::first-letter {
-    color: red;
-} */
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+}
 
-/* .description::first-line {
-    color: red;
+.benefits .item {
+  flex-basis: calc((100% - 32px) / 3);
+}
+
+/* ТаБЛИЦА */
+
+/* body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background-color: #fff;
+  color: #212121;
+}
+
+.product-table td,
+.product-table th {
+  padding: 4px 8px;
+  border: 1px solid #212121;
+}
+
+.product-table {
+  border-collapse: collapse;
+}
+
+.product-row:nth-child(odd) {
+  background-color: #03a9f4;
+}
+
+.product-row:nth-child(even) {
+  background-color: #ffeb3b;
 } */
